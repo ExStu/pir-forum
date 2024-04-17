@@ -1,4 +1,8 @@
 const colors = {
+  uncategorized: {
+    borderLightWhite: "#ffffff21", // 13%
+    backgroundLightWhite: "#FFFFFF1F", // 12%
+  },
   gradients: {
     fillPink:
       "linear-gradient(93.31deg, #E707A1 0%, #6E1FCE 54.5%, rgba(110, 31, 206, 0.2) 100%)",

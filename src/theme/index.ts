@@ -10,10 +10,12 @@ import typography from "./typography";
 declare module "@mui/material/styles" {
   interface Palette {
     gradients: typeof colors.gradients;
+    uncategorized: typeof colors.uncategorized;
   }
 
   interface PaletteOptions {
     gradients?: typeof colors.gradients;
+    uncategorized?: typeof colors.uncategorized;
   }
 
   interface PaletteColor {
@@ -23,6 +25,8 @@ declare module "@mui/material/styles" {
     borderPurple?: string;
     borderPink?: string;
     borderBlue?: string;
+    borderLightWhite?: string;
+    backgroundLightWhite?: string;
   }
 
   interface SimplePaletteColorOptions {
@@ -32,6 +36,8 @@ declare module "@mui/material/styles" {
     borderPurple?: string;
     borderPink?: string;
     borderBlue?: string;
+    borderLightWhite?: string;
+    backgroundLightWhite?: string;
   }
 
   interface TypographyVariants {

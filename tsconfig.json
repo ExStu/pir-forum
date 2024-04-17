@@ -29,7 +29,7 @@
       "@theme/*": ["theme/*"],
       //      "@Views/*": ["Views/*"],
       "@Components/*": ["Components/*"],
-      "@Data/*": ["Data/*"],
+      "@data/*": ["data/*"],
       "@shared/*": ["shared/*"]
     }
   },

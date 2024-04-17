@@ -145,6 +145,11 @@ module.exports = {
             "position": "before"
           },
           {
+            "pattern": "@data/**",
+            "group": "parent",
+            "position": "before"
+          },
+          {
             "pattern": "@shared/**",
             "group": "parent",
             "position": "before"

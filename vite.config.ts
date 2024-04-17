@@ -4,14 +4,5 @@ import tsconfig from "vite-tsconfig-paths";
 import viteSvgr from "vite-plugin-svgr";
 
 export default defineConfig({
-  plugins: [
-    tsconfig(),
-    react(),
-    viteSvgr({
-      include: "**/*.svg",
-      svgrOptions: {
-        exportType: "default",
-      },
-    }),
-  ],
+  plugins: [tsconfig(), react(), viteSvgr()],
 });
