@@ -93,7 +93,6 @@ const Header: FC<IHeader> = ({ items }) => {
             </Link>
           </SHeaderPartnerLinks>
 
-          {/* <SButtonBorder size="medium"> */}
           <Button
             variant="outlined"
             size="medium"
@@ -101,7 +100,6 @@ const Header: FC<IHeader> = ({ items }) => {
           >
             Контакты
           </Button>
-          {/* </SButtonBorder> */}
         </SHeaderWrap>
       </Container>
     </SHeader>

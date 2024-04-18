@@ -1,8 +1,14 @@
 const colors = {
   uncategorized: {
     borderBlue: "#93B7F1",
+    borderBlueDark: "#203553",
     borderLightWhite: "#ffffff21", // 13%
     backgroundLightWhite: "#FFFFFF1F", // 12%
+    backgroundWhite: {
+      12: "#FFFFFF1F",
+      13: "#ffffff21",
+      50: "#FFFFFF0D",
+    },
     backgroundTransparent: "#FFFFFF03", // 1%
     backgroundDark: "#1d2949",
     oceanic: "#09C8DF",
@@ -17,6 +23,8 @@ const colors = {
     borderPink:
       "linear-gradient(93.31deg, #E707A1 0%, #6E1FCE 54.5%, rgba(110, 31, 206, 0.2) 100%)",
     borderBlue: "linear-gradient(180deg, #93B7F1 0%, #003962 100%)",
+    cardPurple:
+      "linear-gradient(120.79deg, #703BF7 -49.01%, rgba(112, 59, 247, 0) 13.65%)",
   },
   primary: {
     main: "#2C4FDA",
@@ -27,6 +35,9 @@ const colors = {
     main: "#E707A1",
     light: "#D20CA9",
     dark: "#AE0AA2",
+  },
+  text: {
+    secondary: "#FFFFFF99",
   },
   error: {
     main: "#C62828",

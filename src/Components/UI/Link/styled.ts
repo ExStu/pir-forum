@@ -31,24 +31,24 @@ export const SLink = styled(Link, {
     },
 
     "&:hover": {
-      color: palette.primary.light,
+      color: palette.secondary.light,
     },
 
     "&:hover svg": {
-      color: palette.primary.light,
+      color: palette.secondary.light,
     },
 
     "&:hover svg path": {
-      fill: palette.primary.light,
+      fill: palette.secondary.light,
     },
 
     "&:active": {
-      color: palette.primary.dark,
-      fill: palette.primary.light,
+      color: palette.secondary.dark,
+      fill: palette.secondary.light,
     },
 
     "&:active svg path": {
-      fill: palette.primary.light,
+      fill: palette.secondary.light,
     },
   }),
 );
