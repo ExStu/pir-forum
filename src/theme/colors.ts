@@ -2,6 +2,9 @@ const colors = {
   uncategorized: {
     borderLightWhite: "#ffffff21", // 13%
     backgroundLightWhite: "#FFFFFF1F", // 12%
+    backgroundTransparent: "#FFFFFF03", // 1%
+    backgroundDark: "#1d2949",
+    oceanic: "#09C8DF",
   },
   gradients: {
     fillPink:

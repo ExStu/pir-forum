@@ -2,15 +2,15 @@ import type { FC, MouseEvent } from "react";
 import { useState } from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 
-import forumLogo from "@assets/logos/logo.svg";
-import rutube from "@assets/logos/rutube.svg";
-import telegram from "@assets/logos/telegram.svg";
-
 import Button from "@Components/UI/Button";
 import { SButtonBorder } from "@Components/UI/Button/styled";
 import Container from "@Components/UI/Container";
 import { Link } from "@Components/UI/Link";
 import Popover from "@Components/UI/Popover";
+
+import forumLogo from "@assets/logos/logo.svg";
+import rutube from "@assets/logos/rutube.svg";
+import telegram from "@assets/logos/telegram.svg";
 
 import {
   SHeader,
@@ -50,7 +50,7 @@ const Header: FC<IHeader> = ({ items }) => {
           <nav>
             <SHeaderLinks>
               {items.map((item) => (
-                <li>
+                <li key={item.value}>
                   <Button
                     onClick={(event) => handleClick(event, item.value)}
                     variant="text"
@@ -74,7 +74,7 @@ const Header: FC<IHeader> = ({ items }) => {
                     (item) =>
                       item.value === dropdownTarget &&
                       item.subItems.map((subItem) => (
-                        <SHeaderDropdownItem>
+                        <SHeaderDropdownItem key={item.value}>
                           <Link component={RouterLink} to="/" onClick={handleClose}>
                             {subItem.value}
                           </Link>

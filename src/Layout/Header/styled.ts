@@ -41,5 +41,7 @@ export const SHeaderDropdownList = styled(motion.div)(() => ({
 export const SHeaderDropdownItem = styled("div")(({ theme: { palette } }) => ({
   padding: "8px 12px",
   borderRadius: "8px",
-  backgroundColor: palette.uncategorized.backgroundLightWhite,
+  backgroundColor: palette.uncategorized.backgroundDark,
+  // backdropFilter: "blur(2px)",
+  // filter: "blur(2px)",
 }));

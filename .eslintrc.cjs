@@ -24,12 +24,14 @@ module.exports = {
     "react", "react-hooks", "@typescript-eslint", "prettier"
   ],
   rules: {
-    "quotes": ["error", "double"],
+    // "quotes": ["error", "double"],
+    "quotes": "off",
     "object-curly-spacing": ["error", "always"],
     "semi": ["error", "always"],
     "no-nested-ternary": "off",
     "no-param-reassign": ["error", { "props": false }],
     "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/quotes": ["error", "double"],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "@typescript-eslint/consistent-type-imports": [
@@ -49,6 +51,7 @@ module.exports = {
         "ignore": ["css"]
       }
     ],
+    "operator-linebreak": "off",
     "react/react-in-jsx-scope": "off",
     "import/prefer-default-export": "off",
     "react/function-component-definition": [
@@ -161,6 +164,11 @@ module.exports = {
           },
           {
             "pattern": "@theme/**",
+            "group": "parent",
+            "position": "before"
+          },
+          {
+            "pattern": "@assets/**",
             "group": "parent",
             "position": "before"
           }

@@ -1,5 +1,6 @@
 import { styled } from "@mui/material/styles";
 
+import List from "@Components/UI/List";
 import Typography from "@Components/UI/Typography";
 
 export const SHero = styled("section")(() => ({
@@ -30,6 +31,7 @@ export const SHeroTopContentDateWrap = styled("div")(() => ({
 export const SHeroTopContentDate = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
+  paddingRight: "15%",
 }));
 
 export const SHeroTopContentTitles = styled("div")(() => ({
@@ -59,7 +61,24 @@ export const SHeroBottomTitle = styled(Typography)(() => ({
   maxWidth: "56%",
 }));
 
-export const SHeroBottomStatsWrap = styled("div")(() => ({
+export const SHeroBottomStatsWrap = styled(List)(() => ({
   display: "flex",
   gap: "24px",
+}));
+
+export const SHeroBottomStatsItem = styled("li")(() => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: "12px",
+}));
+
+export const SHeroBottomStatsItemTop = styled("div")(({ theme: { palette } }) => ({
+  paddingBottom: "20px",
+  borderBottom: `1px solid ${palette.common.white}`,
+}));
+
+export const SHeroBottomStatsItemBottom = styled("div")(() => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: "4px",
 }));

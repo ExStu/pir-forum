@@ -1,16 +1,24 @@
 import type { FC } from "react";
 
-import heroImg from "@assets/images/hero-graph.svg";
-import pirExpoLogo from "@assets/logos/pir-expo.svg";
+import { useTheme } from "@mui/material";
 
 import Button from "@Components/UI/Button";
 import { SButtonBorder } from "@Components/UI/Button/styled";
 import Container from "@Components/UI/Container";
+import { Link } from "@Components/UI/Link";
 import Typography from "@Components/UI/Typography";
+
+import { ExternalLinksEnum } from "@constants/links";
+
+import heroImg from "@assets/images/hero-graph.svg";
+import pirExpoLogo from "@assets/logos/pir-expo.svg";
 
 import {
   SHero,
   SHeroBottom,
+  SHeroBottomStatsItem,
+  SHeroBottomStatsItemBottom,
+  SHeroBottomStatsItemTop,
   SHeroBottomStatsWrap,
   SHeroBottomTitle,
   SHeroTop,
@@ -22,7 +30,7 @@ import {
 } from "./styled";
 
 const Hero: FC = () => {
-  const temp = 1;
+  const { palette } = useTheme();
 
   return (
     <Container>
@@ -31,7 +39,13 @@ const Hero: FC = () => {
           <img src={heroImg} alt="Графическое изображение Форума регионов России" />
           <SHeroTopContent>
             <SHeroTopContentDateWrap>
-              <img src={pirExpoLogo} alt="Логотип ПИР Экспо" />
+              <Link
+                href={ExternalLinksEnum.PIR_EXPO}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={pirExpoLogo} alt="Логотип ПИР Экспо" />
+              </Link>
               <SHeroTopContentDate>
                 <Typography variant="h3">23–25 ОКТЯБРЯ 2024</Typography>
                 <Typography variant="h4">ХАЯТТ РИДЖЕНСИ, МОСКВА</Typography>
@@ -63,7 +77,37 @@ const Hero: FC = () => {
             </Typography>
             , отели и туризм!
           </SHeroBottomTitle>
-          <SHeroBottomStatsWrap>123</SHeroBottomStatsWrap>
+          <SHeroBottomStatsWrap>
+            <SHeroBottomStatsItem>
+              <SHeroBottomStatsItemTop>
+                <Typography variant="text1">Текст</Typography>
+              </SHeroBottomStatsItemTop>
+              <SHeroBottomStatsItemBottom>
+                <Typography variant="extraH2" color={palette.uncategorized.oceanic}>
+                  630
+                </Typography>
+                <Typography variant="text1">Текст</Typography>
+              </SHeroBottomStatsItemBottom>
+            </SHeroBottomStatsItem>
+            <SHeroBottomStatsItem>
+              <SHeroBottomStatsItemTop>
+                <Typography variant="text1">Текст</Typography>
+              </SHeroBottomStatsItemTop>
+              <SHeroBottomStatsItemBottom>
+                <Typography variant="extraH2">40%</Typography>
+                <Typography variant="text1">Текст</Typography>
+              </SHeroBottomStatsItemBottom>
+            </SHeroBottomStatsItem>
+            <SHeroBottomStatsItem>
+              <SHeroBottomStatsItemTop>
+                <Typography variant="text1">Текст</Typography>
+              </SHeroBottomStatsItemTop>
+              <SHeroBottomStatsItemBottom>
+                <Typography variant="extraH2">48 700</Typography>
+                <Typography variant="text1">Текст</Typography>
+              </SHeroBottomStatsItemBottom>
+            </SHeroBottomStatsItem>
+          </SHeroBottomStatsWrap>
         </SHeroBottom>
       </SHero>
     </Container>

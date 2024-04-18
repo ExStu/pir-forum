@@ -87,7 +87,8 @@ export const SButton = styled(LoadingButton)<IButton>(
 
     [`&.${buttonClasses.outlined}`]: {
       border: "none",
-      background: palette.background.default,
+      background: palette.uncategorized.backgroundTransparent,
+      backdropFilter: "blur(2px)",
       transition: "background .12s ease-in",
       "&:hover, &:focus-visible": {
         background: palette.gradients.fillPink,

@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles";
 
 export const SPopover = styled(Popover)(({ theme: { palette } }) => ({
   [`& .${popoverClasses.paper}.${paperClasses.root}`]: {
-    backgroundColor: palette.background.default,
+    backgroundColor: "transparent",
+    boxShadow: "none",
   },
 }));

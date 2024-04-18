@@ -27,6 +27,9 @@ declare module "@mui/material/styles" {
     borderBlue?: string;
     borderLightWhite?: string;
     backgroundLightWhite?: string;
+    backgroundTransparent?: string;
+    backgroundDark?: string;
+    oceanic?: string;
   }
 
   interface SimplePaletteColorOptions {
@@ -38,6 +41,9 @@ declare module "@mui/material/styles" {
     borderBlue?: string;
     borderLightWhite?: string;
     backgroundLightWhite?: string;
+    backgroundTransparent?: string;
+    backgroundDark?: string;
+    oceanic?: string;
   }
 
   interface TypographyVariants {
