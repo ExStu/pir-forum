@@ -24,7 +24,7 @@ module.exports = {
     "react", "react-hooks", "@typescript-eslint", "prettier"
   ],
   rules: {
-    "quotes": ["error", "single"],
+    "quotes": ["error", "double"],
     "object-curly-spacing": ["error", "always"],
     "semi": ["error", "always"],
     "no-nested-ternary": "off",

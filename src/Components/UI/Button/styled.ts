@@ -41,7 +41,7 @@ export const SButton = styled(LoadingButton)<IButton>(
     bgCustom,
     bgGradient,
   }) => ({
-    padding: "40px 20px",
+    padding: "40px 76px",
     fontSize: "32px",
     height: "48px",
     fontWeight: 700,
@@ -171,6 +171,8 @@ interface IButtonBorder {
 
 export const SButtonBorder = styled("div")<IButtonBorder>(
   ({ size = "large", theme: { palette } }) => ({
+    display: "flex",
+    alignSelf: "flex-start",
     height: "fit-content",
     padding: "1px",
     borderRadius: "20px",

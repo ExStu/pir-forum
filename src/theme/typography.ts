@@ -66,7 +66,7 @@ const typography = {
   extraH1: {
     fontStyle: "normal",
     fontWeight: "700",
-    fontSize: "64px",
+    fontSize: "48px",
     lineHeight: "46px",
     fontFamily: "DrukTextWideCyr",
   },

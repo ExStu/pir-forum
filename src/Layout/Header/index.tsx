@@ -47,39 +47,44 @@ const Header: FC<IHeader> = ({ items }) => {
           <Link component={RouterLink} to="/">
             <img src={forumLogo} alt="Логотип Форум регионов России" />
           </Link>
-          <SHeaderLinks>
-            {items.map((item) => (
-              <Button
-                onClick={(event) => handleClick(event, item.value)}
-                variant="text"
+          <nav>
+            <SHeaderLinks>
+              {items.map((item) => (
+                <li>
+                  <Button
+                    onClick={(event) => handleClick(event, item.value)}
+                    variant="text"
+                  >
+                    {item.value}
+                  </Button>
+                </li>
+              ))}
+              <Popover
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
               >
-                {item.value}
-              </Button>
-            ))}
-            <Popover
-              open={open}
-              anchorEl={anchorEl}
-              onClose={handleClose}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-            >
-              <SHeaderDropdownList>
-                {items.map(
-                  (item) =>
-                    item.value === dropdownTarget &&
-                    item.subItems.map((subItem) => (
-                      <SHeaderDropdownItem>
-                        <Link component={RouterLink} to="/" onClick={handleClose}>
-                          {subItem.value}
-                        </Link>
-                      </SHeaderDropdownItem>
-                    )),
-                )}
-              </SHeaderDropdownList>
-            </Popover>
-          </SHeaderLinks>
+                <SHeaderDropdownList>
+                  {/* оптимизировать в 1 проход по массиву */}
+                  {items.map(
+                    (item) =>
+                      item.value === dropdownTarget &&
+                      item.subItems.map((subItem) => (
+                        <SHeaderDropdownItem>
+                          <Link component={RouterLink} to="/" onClick={handleClose}>
+                            {subItem.value}
+                          </Link>
+                        </SHeaderDropdownItem>
+                      )),
+                  )}
+                </SHeaderDropdownList>
+              </Popover>
+            </SHeaderLinks>
+          </nav>
           <SHeaderPartnerLinks>
             <Link component={RouterLink} to="/">
               <img src={rutube} alt="Логотип Рутьюб" />

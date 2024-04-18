@@ -15,7 +15,7 @@ export const SHeaderWrap = styled("div")(() => ({
   alignItems: "center",
 }));
 
-export const SHeaderLinks = styled("div")(() => ({
+export const SHeaderLinks = styled(List)(() => ({
   display: "flex",
   alignItems: "center",
   gap: "24px",

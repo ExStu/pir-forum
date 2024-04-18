@@ -16,10 +16,12 @@ const colors = {
   },
   primary: {
     main: "#2C4FDA",
+    light: "#3563E9",
     dark: "#2935D2",
   },
   secondary: {
     main: "#E707A1",
+    light: "#D20CA9",
     dark: "#AE0AA2",
   },
   error: {
