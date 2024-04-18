@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 
 import Button from "@Components/UI/Button";
-import { SButtonBorder } from "@Components/UI/Button/styled";
 import Container from "@Components/UI/Container";
 import { Link } from "@Components/UI/Link";
 import Popover from "@Components/UI/Popover";
@@ -94,15 +93,15 @@ const Header: FC<IHeader> = ({ items }) => {
             </Link>
           </SHeaderPartnerLinks>
 
-          <SButtonBorder size="medium">
-            <Button
-              variant="outlined"
-              size="medium"
-              sx={{ textTransform: "uppercase" }}
-            >
-              Контакты
-            </Button>
-          </SButtonBorder>
+          {/* <SButtonBorder size="medium"> */}
+          <Button
+            variant="outlined"
+            size="medium"
+            sx={{ textTransform: "uppercase" }}
+          >
+            Контакты
+          </Button>
+          {/* </SButtonBorder> */}
         </SHeaderWrap>
       </Container>
     </SHeader>

@@ -32,7 +32,7 @@ export const SHeaderDropdownWrap = styled("div")(() => ({
 }));
 
 export const SHeaderDropdownList = styled(motion.div)(() => ({
-  paddingTop: "32px",
+  paddingTop: "30px",
   display: "flex",
   flexDirection: "column",
   gap: "8px",

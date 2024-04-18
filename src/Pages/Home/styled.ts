@@ -4,7 +4,7 @@ import heroEdgeBg from "@assets/images/hero-edgeBg.svg";
 
 export const SHomeHeroEdgeBg = styled("div")(() => ({
   backgroundImage: `url(${heroEdgeBg})`,
-  backgroundSize: "fill",
+  backgroundSize: "45%",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "right -85px top",
 }));

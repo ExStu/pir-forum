@@ -86,7 +86,7 @@ export const SButton = styled(LoadingButton)<IButton>(
     },
 
     [`&.${buttonClasses.outlined}`]: {
-      border: "none",
+      border: `1px solid ${palette.uncategorized.borderBlue}`,
       background: palette.uncategorized.backgroundTransparent,
       backdropFilter: "blur(2px)",
       transition: "background .12s ease-in",

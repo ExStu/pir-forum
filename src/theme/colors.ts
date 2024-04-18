@@ -1,5 +1,6 @@
 const colors = {
   uncategorized: {
+    borderBlue: "#93B7F1",
     borderLightWhite: "#ffffff21", // 13%
     backgroundLightWhite: "#FFFFFF1F", // 12%
     backgroundTransparent: "#FFFFFF03", // 1%
