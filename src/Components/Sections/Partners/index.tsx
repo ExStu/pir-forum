@@ -1,21 +1,33 @@
 import type { FC } from "react";
+import { useState } from "react";
 
 import { SwiperSlide } from "swiper/react";
 
 import Carousel from "@Components/Carousel";
+import PartnerCard from "@Components/PartnerCard";
+import TitlePartnerCard from "@Components/TitlePartnerCard";
+import Button from "@Components/UI/Button";
 import Container from "@Components/UI/Container";
 
-import { carouselPartners } from "@data/home/partners";
+import { carouselPartners, partners, titlePartners } from "@data/home/partners";
 
 import {
   SPartners,
   SPartnersCarouselItem,
+  SPartnersCarouselWrap,
+  SPartnersList,
   SPartnersSectionTitle,
+  SPartnersShowMoreBtnWrap,
   SPartnersSubtitle,
+  SPartnersTitledList,
 } from "./styled";
 
 const Partners: FC = () => {
-  const temp = 1;
+  const [showMore, setShowMore] = useState<boolean>(false);
+
+  const handleShowMoreToggle = () => {
+    setShowMore((prevState) => !prevState);
+  };
 
   return (
     <SPartners>
@@ -24,15 +36,43 @@ const Partners: FC = () => {
           ПартнЁры 2023
         </SPartnersSectionTitle>
         <SPartnersSubtitle variant="h4">ПРИ ПОДДЕРЖКЕ</SPartnersSubtitle>
-        <Carousel slidesPerView={4} space={16} className="partners-carousel">
-          {carouselPartners.map((item) => (
-            <SwiperSlide key={item.id}>
-              <SPartnersCarouselItem>
-                <img src={item.image} alt="Логотип партнёра" />
-              </SPartnersCarouselItem>
-            </SwiperSlide>
+        <SPartnersCarouselWrap>
+          <Carousel slidesPerView={4} space={16} className="partners-carousel">
+            {carouselPartners.map((item) => (
+              <SwiperSlide key={item.id}>
+                <SPartnersCarouselItem>
+                  <img src={item.image} alt="Логотип партнёра" />
+                </SPartnersCarouselItem>
+              </SwiperSlide>
+            ))}
+          </Carousel>
+        </SPartnersCarouselWrap>
+        <SPartnersTitledList>
+          {titlePartners.map((item) => (
+            <TitlePartnerCard
+              key={item.title}
+              title={item.title}
+              image={item.image}
+            />
           ))}
-        </Carousel>
+        </SPartnersTitledList>
+        <SPartnersList>
+          {partners.map(
+            (item, index) =>
+              (showMore || index < 5) && (
+                <PartnerCard
+                  key={item.title}
+                  title={item.title}
+                  image={item.image}
+                />
+              ),
+          )}
+        </SPartnersList>
+        <SPartnersShowMoreBtnWrap>
+          <Button size="medium" onClick={handleShowMoreToggle}>
+            {showMore ? "Скрыть" : "Смотреть всё"}
+          </Button>
+        </SPartnersShowMoreBtnWrap>
       </Container>
     </SPartners>
   );

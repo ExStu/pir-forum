@@ -13,7 +13,7 @@ export const SProgram = styled("section")(() => ({
     backgroundImage: "url(/projects-bg.svg)",
     backgroundSize: "20%",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "right -52px top 32px",
+    backgroundPosition: "right -52px top 20px",
     opacity: 0.7,
     zIndex: -1,
   },

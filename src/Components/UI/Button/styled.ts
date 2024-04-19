@@ -150,8 +150,8 @@ export const SButton = styled(LoadingButton)<IButton>(
     },
 
     ...(size === "medium" && {
-      padding: ["6px 16px", "12px 24px"],
-      height: ["32px", "40px"],
+      padding: ["6px 16px", "28px 42px"],
+      // height: ["32px", "40px"],
       fontSize: "20px",
       fontWeight: 700,
       lineHeight: "20px",

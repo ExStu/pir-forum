@@ -26,8 +26,10 @@ const Program: FC = () => {
       <Container>
         <SProgramTitle>
           <Typography variant="extraH2">ДЕЛОВАЯ ПРОГРАММА</Typography>
-          <SButtonBorder>
-            <Button bgColor="secondary">Смотреть программу</Button>
+          <SButtonBorder size="medium">
+            <Button bgColor="secondary" size="medium">
+              Смотреть программу
+            </Button>
           </SButtonBorder>
         </SProgramTitle>
         <SProgramSubtitle>
