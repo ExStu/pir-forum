@@ -7,4 +7,6 @@ export const SThemeCard = styled("article")(({ theme: { palette } }) => ({
   gap: "16px",
   borderRadius: "16px",
   backgroundColor: palette.uncategorized.backgroundWhite[50],
+  border: `1px solid ${palette.uncategorized.backgroundWhite[13]}`,
+  backdropFilter: "blur(2px)",
 }));

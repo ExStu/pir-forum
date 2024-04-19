@@ -3,6 +3,7 @@ import type { FC } from "react";
 import { useTheme } from "@mui/material";
 
 import Hero from "@Components/Sections/Hero";
+import Partners from "@Components/Sections/Partners";
 import Program from "@Components/Sections/Program";
 
 import Header from "@Layout/Header";
@@ -20,6 +21,7 @@ const Home: FC = () => {
         <Hero />
       </SHomeHeroEdgeBg>
       <Program />
+      <Partners />
     </>
   );
 };

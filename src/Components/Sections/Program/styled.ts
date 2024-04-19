@@ -2,6 +2,21 @@ import { styled } from "@mui/material/styles";
 
 export const SProgram = styled("section")(() => ({
   padding: "60px 0",
+  position: "relative",
+  "&::before": {
+    content: "''",
+    position: "absolute",
+    top: 0,
+    right: 0,
+    width: "100%",
+    height: "100%",
+    backgroundImage: "url(/projects-bg.svg)",
+    backgroundSize: "20%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "right -52px top 32px",
+    opacity: 0.7,
+    zIndex: -1,
+  },
 }));
 
 export const SProgramTitle = styled("div")(() => ({

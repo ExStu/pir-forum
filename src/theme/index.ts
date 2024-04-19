@@ -33,6 +33,7 @@ declare module "@mui/material/styles" {
     backgroundWhite?: [x: number];
     cardPurple?: string;
     borderBlueDark?: string;
+    borderC?: [x: string];
   }
 
   interface SimplePaletteColorOptions {
@@ -50,6 +51,7 @@ declare module "@mui/material/styles" {
     backgroundWhite?: [x: number];
     cardPurple?: string;
     borderBlueDark?: string;
+    borderC?: [x: string];
   }
 
   interface TypographyVariants {

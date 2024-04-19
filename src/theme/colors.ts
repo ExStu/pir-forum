@@ -9,6 +9,12 @@ const colors = {
       13: "#ffffff21",
       50: "#FFFFFF0D",
     },
+    borderC: {
+      black: "#262626",
+      blue: "#93B7F1",
+      blueDark: "#203553",
+      lightWhite: "#ffffff21",
+    },
     backgroundTransparent: "#FFFFFF03", // 1%
     backgroundDark: "#1d2949",
     oceanic: "#09C8DF",
