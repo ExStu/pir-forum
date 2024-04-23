@@ -17,6 +17,9 @@ dependencies:
   '@mui/material':
     specifier: ^5.15.15
     version: 5.15.15(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.2.78)(react-dom@18.2.0)(react@18.2.0)
+  '@mui/types':
+    specifier: ^7.2.14
+    version: 7.2.14(@types/react@18.2.78)
   '@reduxjs/toolkit':
     specifier: ^2.2.3
     version: 2.2.3(react-redux@9.1.1)(react@18.2.0)
@@ -64,6 +67,9 @@ dependencies:
     version: 4.3.2(typescript@5.4.5)(vite@5.2.8)
 
 devDependencies:
+  '@maskito/react':
+    specifier: ^2.3.0
+    version: 2.3.0(@maskito/core@2.3.0)(react-dom@18.2.0)(react@18.2.0)
   '@types/facepaint':
     specifier: ^1.2.5
     version: 1.2.5
@@ -746,6 +752,22 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
+
+  /@maskito/core@2.3.0:
+    resolution: {integrity: sha512-i87ZQf8q0YEquvUJm184aJaeN1b57EvwO4dj7VvRBKQu7Ivth/iJG7i0URqWu0LRjLSJCfmhy0K54hEEJH/+Jg==}
+    dev: true
+
+  /@maskito/react@2.3.0(@maskito/core@2.3.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-vK+Yy2SWo9Xmg35WEGkEOCrDqsLTe1tP7AZjLbRXXZNHVf87zTQBQxAsWaHHaBwa619p5DkY8Yaq8leycPmuJw==}
+    peerDependencies:
+      '@maskito/core': ^2.3.0
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
+    dependencies:
+      '@maskito/core': 2.3.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
 
   /@mui/base@5.0.0-beta.40(@types/react@18.2.78)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-I/lGHztkCzvwlXpjD2+SNmvNQvB4227xBXhISPjEaJUXGImOQ9f3D2Yj/T3KasSI/h0MLWy74X0J6clhPmsRbQ==}
@@ -3428,7 +3450,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
 
   /react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
@@ -3538,7 +3559,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /redux-thunk@3.1.0(redux@5.0.1):
     resolution: {integrity: sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==}
@@ -3673,7 +3693,6 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}

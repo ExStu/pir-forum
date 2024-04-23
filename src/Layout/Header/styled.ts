@@ -31,17 +31,17 @@ export const SHeaderDropdownWrap = styled("div")(() => ({
   position: "relative",
 }));
 
-export const SHeaderDropdownList = styled(motion.div)(() => ({
-  paddingTop: "30px",
+export const SHeaderDropdownList = styled(motion.div)(({ theme: { palette } }) => ({
+  marginTop: "36px",
   display: "flex",
   flexDirection: "column",
   gap: "8px",
+  backgroundColor: palette.background.default,
+  borderRadius: "8px",
 }));
 
 export const SHeaderDropdownItem = styled("div")(({ theme: { palette } }) => ({
   padding: "8px 12px",
   borderRadius: "8px",
   backgroundColor: palette.uncategorized.backgroundDark,
-  // backdropFilter: "blur(2px)",
-  // filter: "blur(2px)",
 }));

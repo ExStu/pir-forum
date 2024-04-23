@@ -4,21 +4,21 @@ import { styled } from "@mui/material/styles";
 import type { IIconButton } from "./types";
 
 export const SIconButton = styled(IconButton, {
-  shouldForwardProp: (props) => props !== "variant",
-})<IIconButton>(({ theme: { palette }, variant = "contained" }) => ({
+  shouldForwardProp: (props: string) => !["variant", "bgColor"].includes(props),
+})<IIconButton>(({ theme: { palette }, variant = "contained", bgColor = "primary" }) => ({
   // [`&.${iconButtonClasses.root}`]: {
   //   height: "60px",
   //   width: "60px",
   // },
   ...(variant === "contained" && {
     borderRadius: "4px",
-    backgroundColor: palette.primary.main,
+    backgroundColor: palette[bgColor].main,
     color: palette.common.white,
     "&:hover, &:focus-visible": {
-      background: palette.primary.light,
+      background: palette[bgColor].light,
     },
     "&:active": {
-      background: palette.primary.dark,
+      background: palette[bgColor].dark,
     },
   }),
   ...(variant === "outlined" && {
@@ -49,25 +49,28 @@ export const SIconButton = styled(IconButton, {
     border: "none",
     color: palette.primary.main,
     backgroundColor: "transparent",
-    svg: {
-      path: {
-        fill: palette.secondary.main,
-      },
+    "& svg path[fill]": {
+      fill: palette.secondary.main,
+    },
+    "& svg path[stroke]": {
+      stroke: palette.secondary.main,
     },
     "&:hover, &:focus-visible": {
       backgroundColor: "transparent",
-      svg: {
-        path: {
-          fill: palette.primary.main,
-        },
+      "& svg path[fill]": {
+        fill: palette.secondary.light,
+      },
+      "& svg path[stroke]": {
+        stroke: palette.secondary.light,
       },
     },
     "&:active": {
       backgroundColor: "transparent",
-      svg: {
-        path: {
-          fill: palette.primary.dark,
-        },
+      "& svg path[fill]": {
+        fill: palette.secondary.dark,
+      },
+      "& svg path[stroke]": {
+        stroke: palette.secondary.dark,
       },
     },
   }),
@@ -90,7 +93,13 @@ export const SIconButton = styled(IconButton, {
   },
 
   [`&.${iconButtonClasses.sizeLarge}`]: {
-    height: "48px",
-    width: "48px",
+    height: "76px",
+    width: "110px",
+    borderRadius: "20px",
+
+    "& svg": {
+      width: "48px",
+      height: "48px",
+    },
   },
 }));

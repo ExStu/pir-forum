@@ -31,7 +31,9 @@ const gradientAnimation = keyframes`
     }
 `;
 
-export const SButton = styled(LoadingButton)<IButton>(
+export const SButton = styled(LoadingButton, {
+  shouldForwardProp: (propName: string) => !["bgColor", "bgGradient"].includes(propName),
+})<IButton>(
   ({
     theme: { palette, typography },
     size = "large",
@@ -170,29 +172,27 @@ interface IButtonBorder {
   size?: "large" | "medium" | "small";
 }
 
-export const SButtonBorder = styled("div")<IButtonBorder>(
-  ({ size = "large", theme: { palette } }) => ({
-    display: "flex",
-    alignSelf: "flex-start",
-    height: "fit-content",
-    padding: "1px",
-    borderRadius: "20px",
-    background: palette.gradients.borderBlue,
-    backgroundSize: "100% 100%",
-    transition: "transform .12s ease-in",
-    ...(size === "medium" && {
-      borderRadius: "12px",
-    }),
-    ...(size === "small" && {
-      borderRadius: "12px",
-    }),
-
-    "&:hover": {
-      animation: `3s linear 0s infinite ${gradientAnimation}`,
-    },
-
-    "&:active": {
-      transform: "scale(0.95)",
-    },
+export const SButtonBorder = styled("div")<IButtonBorder>(({ size = "large", theme: { palette } }) => ({
+  display: "flex",
+  alignSelf: "flex-start",
+  height: "fit-content",
+  padding: "1px",
+  borderRadius: "20px",
+  background: palette.gradients.borderBlue,
+  backgroundSize: "100% 100%",
+  transition: "transform .12s ease-in",
+  ...(size === "medium" && {
+    borderRadius: "12px",
   }),
-);
+  ...(size === "small" && {
+    borderRadius: "12px",
+  }),
+
+  "&:hover": {
+    animation: `3s linear 0s infinite ${gradientAnimation}`,
+  },
+
+  "&:active": {
+    transform: "scale(0.95)",
+  },
+}));

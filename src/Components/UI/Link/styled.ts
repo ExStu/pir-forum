@@ -11,6 +11,7 @@ export const SLink = styled(Link, {
   mq({
     display: "flex",
     alignItems: "center",
+    alignSelf: "flex-start",
     gap: "8px",
     color: customColor || palette.common.white,
     fontSize: typography[variant].fontSize,
@@ -20,12 +21,16 @@ export const SLink = styled(Link, {
     textTransform: "none",
 
     "& svg": {
-      width: "24px",
-      height: "24px",
-      transition: "color .15s ease-in",
+      width: "20px",
+      height: "20px",
     },
 
-    "& svg path": {
+    "& svg path[stroke]": {
+      transition: "stroke .15s ease-in",
+      stroke: "currentColor",
+    },
+
+    "& svg path[fill]": {
       transition: "fill .15s ease-in",
       fill: "currentColor",
     },
@@ -34,21 +39,24 @@ export const SLink = styled(Link, {
       color: palette.secondary.light,
     },
 
-    "&:hover svg": {
-      color: palette.secondary.light,
+    "&:hover svg path[fill]": {
+      fill: palette.secondary.light,
     },
 
-    "&:hover svg path": {
-      fill: palette.secondary.light,
+    "&:hover svg path[stroke]": {
+      stroke: palette.secondary.light,
     },
 
     "&:active": {
       color: palette.secondary.dark,
-      fill: palette.secondary.light,
     },
 
-    "&:active svg path": {
-      fill: palette.secondary.light,
+    "&:active svg path[fill]": {
+      fill: palette.secondary.dark,
+    },
+
+    "&:active svg path[stroke]": {
+      stroke: palette.secondary.dark,
     },
   }),
 );
