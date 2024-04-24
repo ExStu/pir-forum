@@ -70,6 +70,10 @@ export const STextField = styled(TextField)<TextFieldProps>(({ theme: { palette 
         borderTopRightRadius: "20px",
         borderBottomLeftRadius: "20px",
         borderBottomRightRadius: "20px",
+
+        "&.Mui-error": {
+          borderColor: palette.error.main,
+        },
         [`& .${filledInputClasses.input}`]: {
           fontSize: ["14px", "16px"],
           lineHeight: "20px",
