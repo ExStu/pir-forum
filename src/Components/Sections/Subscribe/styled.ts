@@ -3,7 +3,8 @@ import { styled } from "@mui/material/styles";
 import Typography from "@Components/UI/Typography";
 
 export const SSubscribe = styled("section")(() => ({
-  padding: "60px 0",
+  paddingTop: "60px",
+  paddingBottom: "120px",
 }));
 
 export const SSubscribeTitle = styled(Typography)(() => ({
@@ -22,6 +23,7 @@ export const SSubscribeForm = styled("form")(() => ({
   flexDirection: "column",
   gap: "12px",
   width: "35%",
+  height: "132px",
 }));
 
 // export const SSubscribeFormWrap = styled("div")(() => ({

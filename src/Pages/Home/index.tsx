@@ -8,9 +8,10 @@ import Partners from "@Components/Sections/Partners";
 import Program from "@Components/Sections/Program";
 import Subscribe from "@Components/Sections/Subscribe";
 
+import Footer from "@Layout/Footer";
 import Header from "@Layout/Header";
 
-import { SHomeHeroEdgeBg } from "@Pages/Home/styled";
+import { SHomeFooterEdgeBg, SHomeHeroEdgeBg } from "@Pages/Home/styled";
 
 import headerData from "@data/home/header";
 
@@ -25,7 +26,10 @@ const Home: FC = () => {
       <Program />
       <Partners />
       <News />
-      <Subscribe />
+      <SHomeFooterEdgeBg>
+        <Subscribe />
+        <Footer />
+      </SHomeFooterEdgeBg>
     </>
   );
 };

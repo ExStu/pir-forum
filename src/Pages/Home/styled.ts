@@ -6,3 +6,10 @@ export const SHomeHeroEdgeBg = styled("div")(() => ({
   backgroundRepeat: "no-repeat",
   backgroundPosition: "right -85px top",
 }));
+
+export const SHomeFooterEdgeBg = styled("div")(() => ({
+  backgroundImage: "url(/footer-bg.svg)",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center bottom -80px",
+}));
