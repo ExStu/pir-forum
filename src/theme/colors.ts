@@ -20,17 +20,13 @@ const colors = {
     oceanic: "#09C8DF",
   },
   gradients: {
-    fillPink:
-      "linear-gradient(93.31deg, #E707A1 0%, #6E1FCE 54.5%, rgba(110, 31, 206, 0.2) 100%)",
+    fillPink: "linear-gradient(93.31deg, #E707A1 0%, #6E1FCE 54.5%, rgba(110, 31, 206, 0.2) 100%)",
     fillBlue: "linear-gradient(93.31deg, #2C4FDA 0%, #2D1FCE 54.5%, #0AC9E8 100%)",
     radial: "radial-gradient(50% 50% at 50% 50%, #A962FF 0%, rgba(0, 0, 0, 0) 100%)",
-    borderPurple:
-      "linear-gradient(73.36deg, #703BF7 16.86%, rgba(112, 59, 247, 0) 84.69%)",
-    borderPink:
-      "linear-gradient(93.31deg, #E707A1 0%, #6E1FCE 54.5%, rgba(110, 31, 206, 0.2) 100%)",
+    borderPurple: "linear-gradient(73.36deg, #703BF7 16.86%, rgba(112, 59, 247, 0) 84.69%)",
+    borderPink: "linear-gradient(93.31deg, #E707A1 0%, #6E1FCE 54.5%, rgba(110, 31, 206, 0.2) 100%)",
     borderBlue: "linear-gradient(180deg, #93B7F1 0%, #003962 100%)",
-    cardPurple:
-      "linear-gradient(120.79deg, #703BF7 -49.01%, rgba(112, 59, 247, 0) 13.65%)",
+    cardPurple: "linear-gradient(120.79deg, #703BF7 -49.01%, rgba(112, 59, 247, 0) 13.65%)",
   },
   primary: {
     main: "#2C4FDA",
@@ -56,7 +52,8 @@ const colors = {
     black: "#1A1A1A",
   },
   background: {
-    default: "#0E1220",
+    // default: "#0E1220",
+    default: "#192346",
   },
 };
 
