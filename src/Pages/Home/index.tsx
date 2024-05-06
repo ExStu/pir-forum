@@ -2,6 +2,7 @@ import type { FC } from "react";
 
 import { useTheme } from "@mui/material";
 
+import Greetings from "@Components/Sections/Greetings";
 import Hero from "@Components/Sections/Hero";
 import News from "@Components/Sections/News";
 import Partners from "@Components/Sections/Partners";
@@ -25,6 +26,7 @@ const Home: FC = () => {
       </SHomeHeroEdgeBg>
       <Program />
       <Partners />
+      <Greetings />
       <News />
       <SHomeFooterEdgeBg>
         <Subscribe />

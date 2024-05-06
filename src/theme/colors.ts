@@ -16,7 +16,12 @@ const colors = {
       lightWhite: "#ffffff21",
     },
     backgroundTransparent: "#FFFFFF03", // 1%
-    backgroundDark: "#1d2949",
+    // backgroundDark: "#1d2949",
+    backgroundDark: "#0E193D",
+    background: {
+      darkBlue: "#0E193D",
+      darkSlate: "#1D283D",
+    },
     oceanic: "#09C8DF",
   },
   gradients: {

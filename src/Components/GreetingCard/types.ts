@@ -3,4 +3,6 @@ export interface IGreetingCardItem {
   lastName: string;
   post: string;
   image: string;
+  expanded: boolean;
+  handleClick: () => void;
 }

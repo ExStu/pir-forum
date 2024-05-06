@@ -39,7 +39,7 @@ export const SCarouselBtn = styled("button")(({ theme: { palette } }) => ({
   },
 
   "&[disabled]:hover": {
-    backgroundColor: "transparent",
+    backgroundColor: palette.common.black,
     borderColor: palette.uncategorized.borderC.black,
   },
 

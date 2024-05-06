@@ -8,13 +8,13 @@ export default [
     image: greetingTemp,
   },
   {
-    firstName: "Имя",
+    firstName: "Имя1",
     lastName: "Фамилия",
     post: "Должность",
     image: greetingTemp,
   },
   {
-    firstName: "Имя",
+    firstName: "Имя2",
     lastName: "Фамилия",
     post: "Должность",
     image: greetingTemp,
