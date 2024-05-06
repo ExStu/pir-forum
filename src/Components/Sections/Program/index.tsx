@@ -1,5 +1,6 @@
 import type { FC } from "react";
 
+import { SectionTitle } from "@Components/SectionTitle";
 import SpecialProjectCard from "@Components/SpecialProjectCard";
 import ThemeCard from "@Components/ThemeCard";
 import Button from "@Components/UI/Button";
@@ -25,7 +26,7 @@ const Program: FC = () => {
     <SProgram>
       <Container>
         <SProgramTitle>
-          <Typography variant="extraH2">ДЕЛОВАЯ ПРОГРАММА</Typography>
+          <SectionTitle>ДЕЛОВАЯ ПРОГРАММА</SectionTitle>
           <SButtonBorder size="medium">
             <Button bgColor="secondary" size="medium">
               Смотреть программу
@@ -40,11 +41,7 @@ const Program: FC = () => {
               Инвестиции&nbsp;
             </Typography>
             в туризм-2030. Люди, проекты,&nbsp;
-            <Typography
-              variant="extraH1"
-              component="span"
-              color="uncategorized.oceanic"
-            >
+            <Typography variant="extraH1" component="span" color="uncategorized.oceanic">
               результаты
             </Typography>
             »
@@ -62,11 +59,7 @@ const Program: FC = () => {
           <Typography variant="h2">Спецпроекты 2023</Typography>
           <SProgramCardsWrap>
             {specialProjectsData.map((item) => (
-              <SpecialProjectCard
-                key={item.title}
-                title={item.title}
-                text={item.text}
-              />
+              <SpecialProjectCard key={item.title} title={item.title} text={item.text} />
             ))}
           </SProgramCardsWrap>
         </SProgramCardsBlock>

@@ -11,11 +11,6 @@ export const SPartners = styled("section")(() => ({
   backgroundPosition: "left -60% top -72px",
 }));
 
-export const SPartnersSectionTitle = styled(Typography)(() => ({
-  textTransform: "uppercase",
-  marginBottom: "32px",
-}));
-
 export const SPartnersSubtitle = styled(Typography)(() => ({
   textTransform: "uppercase",
   textAlign: "center",

@@ -6,6 +6,7 @@ import Greetings from "@Components/Sections/Greetings";
 import Hero from "@Components/Sections/Hero";
 import News from "@Components/Sections/News";
 import Partners from "@Components/Sections/Partners";
+import { Past } from "@Components/Sections/Past";
 import Program from "@Components/Sections/Program";
 import Subscribe from "@Components/Sections/Subscribe";
 
@@ -28,6 +29,7 @@ const Home: FC = () => {
       <Partners />
       <Greetings />
       <News />
+      <Past />
       <SHomeFooterEdgeBg>
         <Subscribe />
         <Footer />

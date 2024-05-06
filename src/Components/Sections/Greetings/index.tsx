@@ -2,6 +2,7 @@ import type { FC } from "react";
 import { useState } from "react";
 
 import GreetingCard from "@Components/GreetingCard";
+import { SectionTitle } from "@Components/SectionTitle";
 import Container from "@Components/UI/Container";
 
 import greetingsData from "@data/home/greetings";
@@ -18,6 +19,7 @@ const Greetings: FC = () => {
   return (
     <SGreetings>
       <Container>
+        <SectionTitle>ПРИВЕТСТВИЯ</SectionTitle>
         <SGreetingsList>
           {greetingsData.map((item, index) => (
             <GreetingCard

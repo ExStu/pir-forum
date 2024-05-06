@@ -8,6 +8,10 @@ export const SHero = styled("section")(() => ({
   paddingBottom: "34px",
 }));
 
+export const SHeroImg = styled("img")(() => ({
+  width: "50%",
+}));
+
 export const SHeroTop = styled("div")(() => ({
   display: "flex",
   gap: "64px",
@@ -42,14 +46,12 @@ export const SHeroTopContentTitles = styled("div")(() => ({
   width: "100%",
 }));
 
-export const SHeroTopContentTitlesBorder = styled("span")(
-  ({ theme: { palette } }) => ({
-    display: "block",
-    height: "6px",
-    width: "70%",
-    backgroundColor: palette.primary.light,
-  }),
-);
+export const SHeroTopContentTitlesBorder = styled("span")(({ theme: { palette } }) => ({
+  display: "block",
+  height: "6px",
+  width: "70%",
+  backgroundColor: palette.primary.light,
+}));
 
 export const SHeroBottom = styled("div")(() => ({
   display: "flex",

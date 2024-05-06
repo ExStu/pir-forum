@@ -1,11 +1,12 @@
 import type { FC } from "react";
 
 import NewsCard from "@Components/NewsCard";
+import { SectionTitle } from "@Components/SectionTitle";
 import Container from "@Components/UI/Container";
 
 import newsData from "@data/home/news";
 
-import { SNews, SNewsList, SNewsTitle } from "./styled";
+import { SNews, SNewsList } from "./styled";
 
 const News: FC = () => {
   const temp = 1;
@@ -13,7 +14,7 @@ const News: FC = () => {
   return (
     <SNews>
       <Container>
-        <SNewsTitle variant="extraH2">НОВОСТИ</SNewsTitle>
+        <SectionTitle>НОВОСТИ</SectionTitle>
         <SNewsList>
           {newsData.map((item) => (
             <NewsCard

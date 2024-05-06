@@ -5,6 +5,7 @@ import { SwiperSlide } from "swiper/react";
 
 import Carousel from "@Components/Carousel";
 import PartnerCard from "@Components/PartnerCard";
+import { SectionTitle } from "@Components/SectionTitle";
 import TitlePartnerCard from "@Components/TitlePartnerCard";
 import Button from "@Components/UI/Button";
 import Container from "@Components/UI/Container";
@@ -16,7 +17,6 @@ import {
   SPartnersCarouselItem,
   SPartnersCarouselWrap,
   SPartnersList,
-  SPartnersSectionTitle,
   SPartnersShowMoreBtnWrap,
   SPartnersSubtitle,
   SPartnersTitledList,
@@ -32,9 +32,7 @@ const Partners: FC = () => {
   return (
     <SPartners>
       <Container>
-        <SPartnersSectionTitle variant="extraH2">
-          ПартнЁры 2023
-        </SPartnersSectionTitle>
+        <SectionTitle>ПартнЁры 2023</SectionTitle>
         <SPartnersSubtitle variant="h4">ПРИ ПОДДЕРЖКЕ</SPartnersSubtitle>
         <SPartnersCarouselWrap>
           <Carousel slidesPerView={4} space={16} className="partners-carousel">
@@ -49,22 +47,14 @@ const Partners: FC = () => {
         </SPartnersCarouselWrap>
         <SPartnersTitledList>
           {titlePartners.map((item) => (
-            <TitlePartnerCard
-              key={item.title}
-              title={item.title}
-              image={item.image}
-            />
+            <TitlePartnerCard key={item.title} title={item.title} image={item.image} />
           ))}
         </SPartnersTitledList>
         <SPartnersList>
           {partners.map(
             (item, index) =>
               (showMore || index < 5) && (
-                <PartnerCard
-                  key={item.title}
-                  title={item.title}
-                  image={item.image}
-                />
+                <PartnerCard key={item.title} title={item.title} image={item.image} />
               ),
           )}
         </SPartnersList>

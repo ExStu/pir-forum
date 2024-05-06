@@ -21,6 +21,7 @@ import {
   SHeroBottomStatsItemTop,
   SHeroBottomStatsWrap,
   SHeroBottomTitle,
+  SHeroImg,
   SHeroTop,
   SHeroTopContent,
   SHeroTopContentDate,
@@ -36,14 +37,10 @@ const Hero: FC = () => {
     <Container>
       <SHero>
         <SHeroTop>
-          <img src={heroImg} alt="Графическое изображение Форума регионов России" />
+          <SHeroImg src={heroImg} alt="Графическое изображение Форума регионов России" />
           <SHeroTopContent>
             <SHeroTopContentDateWrap>
-              <Link
-                href={ExternalLinksEnum.PIR_EXPO}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href={ExternalLinksEnum.PIR_EXPO} target="_blank" rel="noopener noreferrer">
                 <img src={pirExpoLogo} alt="Логотип ПИР Экспо" />
               </Link>
               <SHeroTopContentDate>
@@ -52,17 +49,11 @@ const Hero: FC = () => {
               </SHeroTopContentDate>
             </SHeroTopContentDateWrap>
             <SHeroTopContentTitles>
-              <Typography
-                variant="extraH1"
-                component="h2"
-                sx={{ wordSpacing: "100vw" }}
-              >
+              <Typography variant="extraH1" component="h2" sx={{ wordSpacing: "100vw" }}>
                 ФОРУМ РЕГИОНОВ РОССИИ
               </Typography>
               <SHeroTopContentTitlesBorder />
-              <Typography variant="extraH1">
-                РАЗВИТИЕ ТУРИСТCКОЙ ИНФРАСТРУКТУРЫ
-              </Typography>
+              <Typography variant="extraH1">РАЗВИТИЕ ТУРИСТCКОЙ ИНФРАСТРУКТУРЫ</Typography>
             </SHeroTopContentTitles>
             <SButtonBorder>
               <Button bgGradient="fillPink">Смотреть всё</Button>
